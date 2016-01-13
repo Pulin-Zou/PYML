@@ -1,9 +1,12 @@
+#!/usr/bin/env python
+#coding:utf-8
 from gmm import Normal
 from gmm import GMM
 import numpy as np
 import matplotlib.pylab as plt
 
 if __name__ == '__main__':
+
 
     bmu, bstd = 170, 2
     gmu, gstd = 165, 2
@@ -22,6 +25,5 @@ if __name__ == '__main__':
         y = [priors[i] * params[i].pdf(x)[0][0] for x in bins]
         plt.plot(bins, y, 'r', linewidth=1)
     plt.show()
-
 
 
